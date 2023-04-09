@@ -17,9 +17,11 @@ int number (string i)
 
 int[] RandomArray (int[] array)
 {
+    int a = number("нижний диапазон массива");
+    int b = number("верхний диапазон массива")+1;
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = new Random().Next(-100, 101);
+        array[i] = new Random().Next(a, b);
         System.Console.Write($"{array[i]} ");
     }
     return array;
